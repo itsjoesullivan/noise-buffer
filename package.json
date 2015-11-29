@@ -1,0 +1,11 @@
+{
+  "name": "noise-buffer",
+  "version": "1.0.0",
+  "description": "Generate `AudioBuffer`s of white noise.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "itsjoesullivan",
+  "license": "ISC"
+}
