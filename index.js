@@ -32,6 +32,15 @@ module.exports = function(length, type) {
         b6 = white * 0.115926;
       }
       break;
+    case 'brown':
+      var lastOut = 0.0;
+      for (var i = 0; i < samples; i++) {
+        var white = Math.random() * 2 - 1;
+        output[i] = (lastOut + (0.02 * white)) / 1.02;
+        lastOut = output[i];
+        output[i] *= 3.5; // (roughly) compensate for gain
+      }
+      break;
   }
 
   return noiseBuffer;
