@@ -33,6 +33,7 @@ module.exports = function(length, type) {
       }
       break;
     case 'brown':
+      // just completely http://noisehack.com/generate-noise-web-audio-api/
       var lastOut = 0.0;
       for (var i = 0; i < samples; i++) {
         var white = Math.random() * 2 - 1;
