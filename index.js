@@ -4,7 +4,7 @@ module.exports = function(length, type) {
 
   var sampleRate = 44100;
   var samples = length * sampleRate;
-  var context = new OfflineAudioContext(1, samples, sampleRate);
+  var context = new (window.OfflineAudioContext || window.webkitOfflineAudioContext)(1, samples, sampleRate);
   var noiseBuffer = context.createBuffer(1, samples, sampleRate);
   var output = noiseBuffer.getChannelData(0);
 
