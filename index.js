@@ -1,10 +1,10 @@
 // courtesy of http://noisehack.com/generate-noise-web-audio-api/
-module.exports = function(length, type) {
+module.exports = function(context, length, type) {
   type = type || 'white';
+  length = length || 0;
 
-  var sampleRate = 44100;
+  var sampleRate = context.sampleRate;
   var samples = length * sampleRate;
-  var context = new (window.OfflineAudioContext || window.webkitOfflineAudioContext)(1, samples, sampleRate);
   var noiseBuffer = context.createBuffer(1, samples, sampleRate);
   var output = noiseBuffer.getChannelData(0);
 

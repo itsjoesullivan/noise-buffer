@@ -1,7 +1,7 @@
 {
   "name": "noise-buffer",
-  "version": "2.0.1",
-  "description": "Generate `AudioBuffer`s of white noise.",
+  "version": "3.0.0",
+  "description": "Generate `AudioBuffer`s of noise.",
   "repository": "github:itsjoesullivan/noise-buffer",
   "main": "index.js",
   "author": "itsjoesullivan",
