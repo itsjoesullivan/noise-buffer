@@ -11,9 +11,10 @@ Code taken from [NoiseHack.com](http://noisehack.com/generate-noise-web-audio-ap
 ```javascript
 var NoiseBuffer = require('noise-buffer');
 
-var noise = NoiseBuffer(1); // One second of white noise
-var noise = NoiseBuffer(1, 'pink'); // One second of pink noise
-var noise = NoiseBuffer(1, 'brown'); // One second of brown noise
+var ac = new AudioContext()
+var noise = NoiseBuffer(ac, 1); // One second of white noise
+var noise = NoiseBuffer(ac, 1, 'pink'); // One second of pink noise
+var noise = NoiseBuffer(ac, 1, 'brown'); // One second of brown noise
 
 noise instanceof AudioBuffer // true
 ```
